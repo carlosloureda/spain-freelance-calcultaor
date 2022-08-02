@@ -91,9 +91,13 @@ const IRPFAnual = () => {
       <p>
         <strong>Anual IRPF: {!!anualIrpf && round(anualIrpf) * -1}</strong>
       </p>
+       <p>
+        <strong>Anual % IRPF (No SS): {!!anualNet && round(anualNet * 100 / brutAnual)}</strong>
+      </p>
       <p>
         <strong>Anual Net (No SS): {!!anualNet && round(anualNet)}</strong>
       </p>
+     
       <p>
         <strong>
           Anual Net: {!!anualNet && round(anualNet - 12 * CUOTA_SS_MINIMA_2021)}
